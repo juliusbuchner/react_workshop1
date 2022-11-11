@@ -1,14 +1,8 @@
-import React, { Component } from "react"
-import ReactDOM from "react-dom"
-import "bootstrap/dist/css/bootstrap.css"
+import React from "react"
+import ReactDOM from "react-dom/client"
+import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import App from './App'  
 
-class App extends Component {
-    render() {
-        return(
-            <div className="App">
-                <h1>Hello, all the Goats.</h1>
-            </div>
-        )
-    }
-}
-ReactDOM.render(<App />, document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<App/>)
