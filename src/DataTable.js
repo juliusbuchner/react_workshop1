@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { useState } from "react";
 
-const DataTable = (props) => {
+const DataTable = () => {
     
     const [studentList, setStudentList] = useState([]);
     
