@@ -41,23 +41,25 @@ const TableHeader = () => {
     )
 }
 
-const TableAction = () => {
-    <button type="button" className="btn btn-primary mb-2" /*onClick={}*/ >Details</button>
+const TableAction = (props) => {
+    <button onClick={props.showDetails} >Details</button>
 }
 
 const TableRow = (props) => {
-    const rows = props.studentList.map(student => {
-        return (
-            <tr key={student.id} >
-                <td>{student.id}</td>
-                <td>{student.firstName}</td>
-                <td>{student.lastName}</td>
-                <td>{student.age}</td>
-                <TableAction />
-            </tr>
+    const showDetails = () =>{}
+    return (
+        props.studentList.map(student =>
+            <tbody>
+                <tr key={student.id} >
+                    <td>{student.id}</td>
+                    <td>{student.firstName}</td>
+                    <td>{student.lastName}</td>
+                    <td>{student.age}</td>
+                    <TableAction studentId={student.id} showDetails={showDetails}/>
+                </tr>
+            </tbody>
         )
-    })
-    return <tbody>{rows}</tbody>
+    )
 }
 
 export default DataTable

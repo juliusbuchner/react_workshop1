@@ -3,7 +3,7 @@ import DataTable from "./DataTable";
 
 class App extends Component {
     state = {
-        students: [
+        student: [
             {
                 id: 1,
                 firstName: 'Bamse',
